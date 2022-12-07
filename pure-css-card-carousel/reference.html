@@ -1,0 +1,108 @@
+<!-- Reference from 
+  "Pure CSS 3 items carousel infinite loop" by Kinaly,
+  https://codepen.io/Kinaly/pen/ZQVmyy -->
+  
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./reference/css/reference.css" />
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <input type="radio" name="slide-radios" class="hacked-radio hacked-radio--show-slide-2" id="slide-to-screen-02" checked="checked" />
+    <input type="radio" name="slide-radios" class="hacked-radio hacked-radio--show-slide-3" id="slide-to-screen-03" />
+    <input type="radio" name="slide-radios" class="hacked-radio hacked-radio--show-slide-1" id="slide-to-screen-01" />
+    
+    <div class="slide-nav">
+      <div class="slide-nav__item">
+        <div class="slide-nav__active-area">
+          <label for="slide-to-screen-02" class="slide-nav__link slide-nav__link--left">2</label>
+          <label for="slide-to-screen-03" class="slide-nav__link slide-nav__link--left">3</label>
+          <label for="slide-to-screen-01" class="slide-nav__link slide-nav__link--left">1</label>
+        </div>
+      </div>
+      
+      <div class="slide-nav__item slide-nav__item--right">
+        <div class="slide-nav__active-area slide-nav__active-area--right">
+          <label for="slide-to-screen-02" class="slide-nav__link slide-nav__link--right">2</label>
+          <label for="slide-to-screen-03" class="slide-nav__link slide-nav__link--right">3</label>
+          <label for="slide-to-screen-01" class="slide-nav__link slide-nav__link--right">1</label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <div class="slide__visible-panel">
+        <div class="slide__ribbon">       
+          <div class="slide__item slide__item--one">
+            <div class="slide-nav">
+              <div class="slide-nav__item">
+                <div class="slide-nav__active-area">
+                  <label for="slide-to-screen-02" class="slide-nav__link slide-nav__link--left">2</label>
+                  <label for="slide-to-screen-03" class="slide-nav__link slide-nav__link--left">3</label>
+                  <label for="slide-to-screen-01" class="slide-nav__link slide-nav__link--left">1</label>
+                </div>
+              </div>
+  
+              <div class="slide-nav__item slide-nav__item--right">
+                <div class="slide-nav__active-area slide-nav__active-area--right">
+                  <label for="slide-to-screen-02" class="slide-nav__link slide-nav__link--right">2</label>
+                  <label for="slide-to-screen-03" class="slide-nav__link slide-nav__link--right">3</label>
+                  <label for="slide-to-screen-01" class="slide-nav__link slide-nav__link--right">1</label>
+                </div>
+              </div>
+            </div>
+            1
+          </div>
+          
+          <div class="slide__item slide__item--two">
+            <div class="slide-nav">
+              <div class="slide-nav__item">
+                <div class="slide-nav__active-area">
+                  <label for="slide-to-screen-02" class="slide-nav__link slide-nav__link--left">2</label>
+                  <label for="slide-to-screen-03" class="slide-nav__link slide-nav__link--left">3</label>
+                  <label for="slide-to-screen-01" class="slide-nav__link slide-nav__link--left">1</label>
+                </div>
+              </div>
+  
+              <div class="slide-nav__item slide-nav__item--right">
+                <div class="slide-nav__active-area slide-nav__active-area--right">
+                  <label for="slide-to-screen-02" class="slide-nav__link slide-nav__link--right">2</label>
+                  <label for="slide-to-screen-03" class="slide-nav__link slide-nav__link--right">3</label>
+                  <label for="slide-to-screen-01" class="slide-nav__link slide-nav__link--right">1</label>
+                </div>
+              </div>
+            </div>
+            2
+          </div>
+          
+          <div class="slide__item slide__item--three">
+            <div class="slide-nav">
+              <div class="slide-nav__item">
+                <div class="slide-nav__active-area">
+                  <label for="slide-to-screen-02" class="slide-nav__link slide-nav__link--left">2</label>
+                  <label for="slide-to-screen-03" class="slide-nav__link slide-nav__link--left">3</label>
+                  <label for="slide-to-screen-01" class="slide-nav__link slide-nav__link--left">1</label>
+                </div>
+              </div>
+  
+              <div class="slide-nav__item slide-nav__item--right">
+                <div class="slide-nav__active-area slide-nav__active-area--right">
+                  <label for="slide-to-screen-02" class="slide-nav__link slide-nav__link--right">2</label>
+                  <label for="slide-to-screen-03" class="slide-nav__link slide-nav__link--right">3</label>
+                  <label for="slide-to-screen-01" class="slide-nav__link slide-nav__link--right">1</label>
+                </div>
+              </div>
+            </div>
+            3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

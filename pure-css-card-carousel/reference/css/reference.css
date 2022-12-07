@@ -1,0 +1,194 @@
+/* basic styling */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #354FA4, #4F317B);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 2em 0 1em;
+}
+h1:first-child {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin: 2em 0 1em;
+}
+
+.wrapper {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1em;
+  width: 80%;
+  max-width: 800px;
+  margin: 2em auto;
+  box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.16);
+}
+
+.slide-nav {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.slide .slide-nav {
+  position: absolute;
+  top: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.slide-nav__item {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.slide-nav__active-area {
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+  position: relative;
+  display: inline-block;
+}
+
+.slide-nav__item--right {
+  text-align: right;
+}
+
+.slide-nav__link {
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 2rem;
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.slide {
+  position: relative;
+}
+
+.slide__visible-panel {
+  margin: 0 auto;
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slide__ribbon {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.slide__item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  font-size: 4em;
+  text-align: center;
+  color: #fff;
+  padding: 1em 0;
+  transition-property: left, z-index;
+  transition-delay: 0s;
+  transition-duration: 350ms;
+  transition-timing-function: ease-in-out;
+}
+
+.slide__item--one {
+  background-color: #275966;
+  left: -100%;
+}
+
+.slide__item--two {
+  background-color: #CCAF69;
+  left: 0;
+}
+
+.slide__item--three {
+  background-color: #B64E54;
+  left: 100%;
+}
+
+.hacked-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+}
+
+.hacked-radio--show-slide-2:checked ~ .slide-nav .slide-nav__link--left[for=slide-to-screen-01],
+.hacked-radio--show-slide-2:checked ~ .slide .slide-nav__link--left[for=slide-to-screen-01] {
+  display: block;
+}
+.hacked-radio--show-slide-2:checked ~ .slide-nav .slide-nav__link--right[for=slide-to-screen-03],
+.hacked-radio--show-slide-2:checked ~ .slide .slide-nav__link--right[for=slide-to-screen-03] {
+  display: block;
+}
+
+.hacked-radio--show-slide-3:checked ~ .slide-nav .slide-nav__link--left[for=slide-to-screen-02],
+.hacked-radio--show-slide-3:checked ~ .slide .slide-nav__link--left[for=slide-to-screen-02] {
+  display: block;
+}
+.hacked-radio--show-slide-3:checked ~ .slide-nav .slide-nav__link--right[for=slide-to-screen-01],
+.hacked-radio--show-slide-3:checked ~ .slide .slide-nav__link--right[for=slide-to-screen-01] {
+  display: block;
+}
+
+.hacked-radio--show-slide-1:checked ~ .slide-nav .slide-nav__link--left[for=slide-to-screen-03],
+.hacked-radio--show-slide-1:checked ~ .slide .slide-nav__link--left[for=slide-to-screen-03] {
+  display: block;
+}
+.hacked-radio--show-slide-1:checked ~ .slide-nav .slide-nav__link--right[for=slide-to-screen-02],
+.hacked-radio--show-slide-1:checked ~ .slide .slide-nav__link--right[for=slide-to-screen-02] {
+  display: block;
+}
+
+.hacked-radio--show-slide-2:checked ~ .slide .slide__item--one {
+  left: -100%;
+}
+.hacked-radio--show-slide-2:checked ~ .slide .slide__item--two {
+  left: 0;
+  z-index: 100;
+}
+.hacked-radio--show-slide-2:checked ~ .slide .slide__item--three {
+  left: 100%;
+}
+
+.hacked-radio--show-slide-3:checked ~ .slide .slide__item--one {
+  left: 100%;
+}
+.hacked-radio--show-slide-3:checked ~ .slide .slide__item--two {
+  left: -100%;
+}
+.hacked-radio--show-slide-3:checked ~ .slide .slide__item--three {
+  left: 0;
+  z-index: 100;
+}
+
+.hacked-radio--show-slide-1:checked ~ .slide .slide__item--one {
+  left: 0;
+  z-index: 100;
+}
+.hacked-radio--show-slide-1:checked ~ .slide .slide__item--two {
+  left: 100%;
+}
+.hacked-radio--show-slide-1:checked ~ .slide .slide__item--three {
+  left: -100%;
+}
