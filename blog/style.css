@@ -21,7 +21,7 @@
 }
 
 :root {
-    font-size: 10px; /* 1rem = 10px */
+    font-size: 62.5%; /* 1rem = 10px */
     font-family: 'leon-sans-light', 'kopub-dotum-light', sans-serif;
 }
 

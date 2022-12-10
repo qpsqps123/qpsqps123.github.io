@@ -1,0 +1,77 @@
+@import url(./normalize.css);
+@import url(./reset.css);
+/* 
+Q. reset과 normalize를 함께 써줘야 좋을까?
+Q. 순서를 normalize -> reset으로 써야하는 이유가 뭘까?
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
+
+/* hidden contents */
+
+/* default style*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+/* link style */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* body */
+body {
+  font-size: 1.7rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* layout */
+.header {
+  width: 130rem;
+  margin: 0 auto;
+}
+/* 
+Q. layout을 적용하면 콘텐츠가 가운데 배치되는 원리가 뭘까?
+*/
+
+/* header */
+.header {
+  position: relative;
+  height: 10rem;
+}
+
+@media (max-width: 50rem) {
+  .header {
+    width: 90%;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  top: 2rem;
+  left: 25vw;
+}
+
+.header__language {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.05rem;
+  text-transform: capitalize;
+}
+
+.header__language-contents {
+  display: none;
+  border: 1px solid #aaa;
+  padding: 1rem;
+}
+
+.header__language:hover .header__language-contents {
+  display: block;
+}
