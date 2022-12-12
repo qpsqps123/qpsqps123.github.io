@@ -7,6 +7,14 @@ Q. 순서를 normalize -> reset으로 써야하는 이유가 뭘까?
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
 
 /* hidden contents */
+.a11y-hidden {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
 
 /* default style*/
 *, *::before, *::after {
@@ -30,48 +38,84 @@ body {
 }
 
 /* layout */
-.header {
+.header-wrapper {
   width: 130rem;
   margin: 0 auto;
 }
+
+.navigation-wrapper {
+  margin: 0 auto;
+}
+
 /* 
 Q. layout을 적용하면 콘텐츠가 가운데 배치되는 원리가 뭘까?
 */
 
-/* header */
-.header {
+.header-wrapper {
+  padding: 2.5rem 0;
   position: relative;
   height: 10rem;
 }
 
-@media (max-width: 50rem) {
-  .header {
-    width: 90%;
-  }
-}
-
 .header__logo {
   position: absolute;
-  top: 2rem;
-  left: 25vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 83.75rem) {
+    .header-wrapper {
+      padding: 2.5rem 1rem;
+      width: 100%;
+    }
 }
 
 .header__language {
   position: absolute;
-  top: 2rem;
+  top: 2.5rem;
   right: 0;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.05rem;
   text-transform: capitalize;
+  padding: 1.5rem;
+  white-space: nowrap;
+}
+
+.header__language i {
+  text-indent: 0.5rem;
+}
+
+@media screen and (max-width: 83.75rem) {
+  .header__language {
+    right: 1rem;
+  }
 }
 
 .header__language-contents {
   display: none;
-  border: 1px solid #aaa;
+  background-color: #fff;
+  border: 0.1rem solid #aaa;
+  border-radius: 0.5rem;
   padding: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
 }
 
 .header__language:hover .header__language-contents {
   display: block;
 }
+
+.navigation {
+  background-color: aquamarine;
+  height: 8rem;
+  border-top: 1px solid #aaa;
+}
+
+.navigation-wrapper {
+  background-color: violet;
+  height: 8rem;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
