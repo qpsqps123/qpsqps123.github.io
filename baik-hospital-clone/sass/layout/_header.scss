@@ -1,0 +1,57 @@
+.header-wrapper {
+  padding: 2.5rem 0;
+  position: relative;
+  height: 10rem;
+}
+
+@media screen and (max-width: 83.75rem) {
+  .header-wrapper {
+    padding: 2.5rem 1rem;
+    width: 100%;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__language {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.05rem;
+  text-transform: capitalize;
+  padding: 1.5rem;
+  white-space: nowrap;
+
+  i {
+    text-indent: 0.5rem;
+  }
+
+  &-contents {
+    display: none;
+    background-color: #fff;
+    border: 0.1rem solid #aaa;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  &:hover &-contents {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 83.75rem) {
+  .header__language {
+    right: 1rem;
+  }
+}
+
+
+

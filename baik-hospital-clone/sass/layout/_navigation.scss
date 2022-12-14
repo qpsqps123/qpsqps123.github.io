@@ -1,0 +1,12 @@
+.navigation {
+  background-color: aquamarine;
+  height: 8rem;
+  border-top: 1px solid #aaa;
+
+  &-wrapper {
+    background-color: violet;
+    height: 8rem;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}

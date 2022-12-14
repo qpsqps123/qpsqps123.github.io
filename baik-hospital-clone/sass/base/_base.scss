@@ -1,0 +1,28 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.7rem;
+}
+
+/* link style */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* hidden contents */
+.a11y-hidden {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
