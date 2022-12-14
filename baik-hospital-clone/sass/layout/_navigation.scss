@@ -10,3 +10,9 @@
     flex-flow: row nowrap;
   }
 }
+
+.navigation__menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
